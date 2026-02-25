@@ -8,7 +8,6 @@ export default function Header() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Courses", path: "/courses" },
-    { name: "Become a Tutor", path: "/tutor" },
     { name: "About Us", path: "/about" },
     { name: "Contact Us", path: "/contact" },
   ];
@@ -29,7 +28,7 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.path}
-              className={`relative transition duration-300 hover:text-green-500 ${
+              className={`transition duration-300 hover:text-green-500 ${
                 pathname === link.path
                   ? "text-green-500"
                   : "text-gray-700"
@@ -40,11 +39,25 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Right Button */}
-        <div>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition duration-300 shadow-md">
+        {/* Right Side Buttons */}
+        <div className="flex items-center gap-4">
+          
+          {/* Become a Tutor Button */}
+          <Link
+            href="/tutor"
+            className="text-sm font-medium text-green-600 hover:text-green-700 transition"
+          >
+            Become a Tutor
+          </Link>
+
+          {/* Sign In / Join Button */}
+          <Link
+            href="/login"
+            className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium transition duration-300 shadow-md"
+          >
             Sign In / Join
-          </button>
+          </Link>
+
         </div>
       </div>
     </header>

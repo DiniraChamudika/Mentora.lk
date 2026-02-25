@@ -1,7 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Mentora.lk",
@@ -15,17 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
-        {/* Header */}
-        <Navbar />
-
-        {/* Page Content */}
-        <main className="flex-grow">
-          {children}
-        </main>
-
-        {/* Footer */}
-        <Footer />
+      <body className="bg-gray-50 text-gray-800 min-h-screen">
+        {children}
       </body>
     </html>
   );
