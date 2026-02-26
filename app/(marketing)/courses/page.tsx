@@ -4,6 +4,7 @@ import FilterSection from "@/components/sections/FilterSection";
 export default function CoursesPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
+      <div className="h-20"></div> 
 
       {/* PAGE HEADER */}
       <section className="bg-white border-b">
