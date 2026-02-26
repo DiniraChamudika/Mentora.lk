@@ -15,8 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
-        {/* Header */}
+<body className="bg-white text-gray-800">        {/* Header */}
         <Navbar />
 
         {/* Page Content */}

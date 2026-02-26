@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { GraduationCap, MapPin, Star } from "lucide-react";
+import Link from "next/link";
 
 interface CourseCardProps {
+  id: string;
   title: string;
   teacher: string;
   rating: string;
@@ -11,6 +13,7 @@ interface CourseCardProps {
 }
 
 export default function CourseCard({
+   id,
   title,
   teacher,
   rating,
@@ -20,8 +23,9 @@ export default function CourseCard({
 
 }: CourseCardProps) {
   return (
-    <div className="bg-white rounded-xl shadow hover:shadow-lg transition">
-      <Image
+    <Link href={`/tutor/${id}`}>
+      <div className="bg-white rounded-xl shadow hover:shadow-lg transition">
+        <Image
   src={image}
   alt={title}
   width={250}
@@ -48,6 +52,7 @@ export default function CourseCard({
 <div className="flex items-start gap-2 text-gray-500 text-xs mb-2">          <MapPin size={16} className="text-green-600" />
           <p>{location}</p>
         </div>
-    </div>
+      </div>
+    </Link>
   );
 }
