@@ -94,7 +94,7 @@ export default function CoursesSection({ search }: CoursesProps) {
   ];
 
   const filteredCourses = tutors.filter((course) =>
-  course.title.toLowerCase().includes(search.toLowerCase())
+course.title.toLowerCase().includes(search.toLowerCase())
 );
 
   return (

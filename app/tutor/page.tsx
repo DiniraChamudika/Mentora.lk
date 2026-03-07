@@ -26,9 +26,10 @@ export default function TutorPage() {
         {selectedTutors.map((tutor) => (
           <CourseCard
             key={tutor.id}
+            id={tutor.id}
             title={tutor.title}
             teacher={tutor.teacher}
-            rating={Number(tutor.rating)}
+            rating={tutor.rating}
             image={tutor.image}
             qualification={tutor.qualification}
             location={tutor.location}

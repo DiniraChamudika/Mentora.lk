@@ -14,13 +14,13 @@ export default function Home() {
       <FeaturesSection />
 
       {/* MIDDLE SECTION (Filter + Courses) */}
-      <section className="bg-gray-100 py-16">
+    <section className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-4 gap-8">
 
             {/* LEFT SIDE - FILTER */}
             <div className="lg:col-span-1">
-              <FilterSection />
+            <FilterSection />
             </div>
 
             {/* RIGHT SIDE - COURSES */}

@@ -2,15 +2,20 @@
 
 import FilterDropdown from "@/components/ui/FilterDropdown";
 
-export default function FilterSection() {
+interface FilterSectionProps {
+  onSubjectChange: (subject: string) => void;
+}
+
+export default function FilterSection({ onSubjectChange }: FilterSectionProps) {
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-sm w-full md:w-64 h-fit">
+    <div className="bg-white p-6 rounded-2xl shadow-sm w-full md:w-75 h-fit">
 
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-gray-900">
           Filters
         </h3>
+
         <button className="text-sm text-green-600 hover:underline">
           Reset All
         </button>
@@ -28,6 +33,7 @@ export default function FilterSection() {
             "ICT",
             "Commerce",
           ]}
+          onSelect={onSubjectChange}
         />
 
         {/* Price Range */}

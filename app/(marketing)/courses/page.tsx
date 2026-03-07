@@ -1,5 +1,5 @@
 import CoursesSection from "@/components/sections/CoursesSection";
-import FilterSection from "@/components/sections/FilterSection";
+//import FilterSection from "@/components/sections/FilterSection";
 
 export default function CoursesPage() {
   return (
@@ -18,11 +18,7 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      {/* MAIN CONTENT */}
-      <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10">
-        <FilterSection />
-        <CoursesSection search="" />
-      </section>
+      
 
     </div>
   );

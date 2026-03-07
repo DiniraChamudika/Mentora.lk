@@ -43,15 +43,17 @@ export default function CourseCard({
           ⭐ {rating}
         </p>
       </div>
-      {/* Qualification */}
-<div className="flex items-start gap-2 text-gray-500 text-xs mb-2">          <GraduationCap size={16} className="mt-1 text-green-600" />
-          <p className="leading-tight">{qualification}</p>
-        </div>
+     {/* Qualification */}
+<div className="flex items-start gap-2 text-gray-500 text-xs mb-2 pl-4">
+  <GraduationCap size={16} className="mt-1 text-green-600" />
+  <p className="leading-tight">{qualification}</p>
+</div>
 
-        {/* Location */}
-<div className="flex items-start gap-2 text-gray-500 text-xs mb-2">          <MapPin size={16} className="text-green-600" />
-          <p>{location}</p>
-        </div>
+{/* Location */}
+<div className="flex items-start gap-2 text-gray-500 text-xs mb-2 pl-4">
+  <MapPin size={16} className="text-green-600" />
+  <p>{location}</p>
+</div>
       </div>
     </Link>
   );
