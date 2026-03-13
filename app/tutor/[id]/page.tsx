@@ -7,6 +7,9 @@ interface PageProps {
   };
 }
 
+import Link from "next/link";
+
+
 export default function TutorProfile({ params }: PageProps) {
   return (
 
@@ -24,7 +27,12 @@ export default function TutorProfile({ params }: PageProps) {
         </p>
       </div>
 
-      
+       <div className="w-full flex justify-end">
+  <button className="flex items-center gap-2 text-teal-600 hover:text-teal-800 font-medium transition-colors duration-200">
+    <Pencil size={18} />
+    Edit Profile
+  </button>
+</div>
 
       {/* Tutor Info */}
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mt-10 bg-white p-6 rounded-2xl shadow-md border border-gray-100">
@@ -84,10 +92,12 @@ export default function TutorProfile({ params }: PageProps) {
         <h3 className="text-3xl font-bold text-gray-800 mb-4 md:mb-0">
           Rs: 2000 / 2 Hrs
         </h3>
-        <button className="flex items-center gap-2 text-teal-600 hover:text-teal-800 font-medium transition-colors duration-200">
-          <Pencil size={18} />
-          Edit Profile
-        </button>
+       
+  <Link href="/enroll">
+  <button className="bg-green-600 text-white px-4 py-2 rounded">
+    Enroll
+  </button>
+</Link>
       </div>
     </div>
   );

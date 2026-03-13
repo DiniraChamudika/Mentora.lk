@@ -5,7 +5,6 @@ import FeaturesSection from "@/components/sections/FeaturesSection";
 import CoursesSection from "@/components/sections/CoursesSection";
 import FilterSection from "@/components/sections/FilterSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
-
 export default function Home() {
   const [search, setSearch] = useState("");
   return (
